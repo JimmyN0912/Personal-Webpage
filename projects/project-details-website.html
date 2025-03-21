@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification Bot for LINE | Projects | Jimmy N</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/additional.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="../index.html">JimmyN's Personal Playground</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../projects.html" class="active">Projects</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+    <main>
+        <article class="project-detail">
+            <header class="project-detail-header">
+                <h1>Personal Website</h1>
+                <div class="post-meta-info">
+                    <span><i class="far fa-calendar"></i> March 17, 2025</span>
+                    <span><i class="fas fa-eye"></i> <span class="page-count">0</span> views</span>
+                </div>
+                <div class="project-tags">
+                    <span>Web</span>
+                </div>
+            </header>
+
+            <div class="project-description">
+                <h2>1. Project Overview</h2>
+                <p>This project is a personal website that I created to showcase my projects, blog posts, and other information about me. The website is built using HTML, CSS, and JavaScript, and is hosted on Cloudflare Pages (for now)</p>
+
+                <h2>2. Key Features</h2>
+                <ul>
+                    <li>Responsive site design that works on all devices</li>
+                    <li>No trackers or ads, ensuring privacy</li>
+                    <li>Counters for page views and unique visitors</li>
+                    <li>Filters for projects and blog posts</li>
+                    <li>Easy to use contact form</li>
+                </ul>
+                <p></p>
+
+                <h2>3. Technical Details</h2>
+                <p>The website is built using HTML, CSS, and JavaScript. The site is hosted on Cloudflare Pages, which provides free hosting with a custom domain. The site uses no trackers or ads, ensuring privacy for visitors.</p>
+                <ul>
+                    <li>HTML: Used for the structure of the site</li>
+                    <li>CSS: Used for styling and layout</li>
+                    <li>JavaScript: Used for interactivity and dynamic content</li>
+                    <li>Cloudflare Pages: Used for hosting the site and basic domain protection and analytics</li>
+                </ul>
+                <p></p>
+
+                <h2>4. Development Process</h2>
+                <p>I came up with the idea for this website after realizing that this will make for a really good project to showcase my skills, a place where I can share my projects and blog posts, and an interesting project that I can put in my academic portfolio.</p>
+                <p>I started by consulting with AI, <strong>Claude 3.7 Sonnet Thinking</strong> in Github Copilot, to get some ideas on how to design the website, as well as some examples. I then started coding the website from scratch, using HTML, CSS, and JavaScript.</p>
+                <div class="full-width-image" title="Click me to zoom in!">
+                    <img src="images/02-personal-website/Github Copilot.png" alt="Github Copilot Screen" class="modal-image">
+                    <div class="container">
+                        <p>Github Copilot Screen <i>Click the image to zoom in!</i></p>
+                    </div>
+                </div>
+                <p>Since I already had a domain on Cloudflare, I decided to host the site with Cloudflare Pages. I plan to move the site to my own server in the future, but for now, Cloudflare Pages is a great free option with unbeatable uptime and convenience.</p>
+                <div class="full-width-image" title="Click me to zoom in!">
+                    <img src="images/02-personal-website/Cloudflare Pages.png" alt="Cloudflare Pages Screen" class="modal-image">
+                    <div class="container">
+                        <p>Cloudflare Pages Screen <i>Click the image to zoom in!</i></p>
+                    </div>
+                </div>
+                <p>My initial plan for the website is to showcase my personal projects and blogs. The template by Claude was more than enough for me, so I then focused on adapting the template for my own use. It then transformed into the page you are on now!</p>
+
+
+                <h2>5. Development Roadmap</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">March 9, 2025</div>
+                        <div class="timeline-content">
+                            <h3>Project Started</h3>
+                            <p>The development was initiated</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">March 18, 2025</div>
+                        <div class="timeline-content">
+                            <h3>Website Deployed</h3>
+                            <p>The website was published to my subdomain, '<strong>blog.jimmyn.idv.tw</strong>'</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-future">
+                    <div class="timeline-future-item">
+                        <div class="timeline-future-date">Q2 2025</div>
+                        <div class="timeline-content">
+                            <h3>Cleanup and optimise source codes</h3>
+                            <p>The current code contains many places that can be improved to increase readability and reduce clutter.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-future-item">
+                        <div class="timeline-future-date">Q2 2025</div>
+                        <div class="timeline-content">
+                            <h3>Self host the website</h3>
+                            <p>The website was hosted on Cloudflare Pages, but I plan to move to my own hardware after I figure out how reverse proxies work.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-future-item">
+                        <div class="timeline-future-date">Sometime in the future...</div>
+                        <div class="timeline-content">
+                            <h3>Many more to come!</h3>
+                            <p>I'll update this when I come up with more ideas!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!--
+                <h2>Project Images</h2>
+                <div class="project-images">
+                    <div class="project-image-item"></div>
+                    <div class="project-image-item"></div>
+                    <div class="project-image-item"></div>
+                    <div class="project-image-item"></div>
+                </div>
+-->
+                <h2>Outcomes & Lessons</h2>
+                <p>I've dreamed of having my own page for a long time now, ever since I bought a book about websites in elementary school.</p>
+                <p>So when I finally bought my own domain, '<strong>jimmyn.idv.tw</strong>', it suddenly occured to me that it would be possible now! I didn't do it back then mainly because I don't have my domain and hardware to host it, but it's all posible now!</p>
+                <p>The process of developing and setting up the website is very enjoyable for me, and I will continue to add new features and pages to this website!</p>
+
+                <div class="project-links">
+                    <a href="" class="btn primary"><i class="fab fa-github"></i> View Source</a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Jimmy N</h3>
+                    <p>Developer, student, and creative thinker based in Taiwan.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/jimmyn0912/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/JimmyN0912"><i class="fab fa-github"></i></a>
+                        <a href="mailto:jjy@jimmyn.idv.tw"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 JimmyN. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/visitor-counter.js"></script>
+    <input type="hidden" id="project-post-id" value="personal-website">
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Jimmy N</title>
+    <link rel="stylesheet" href="css/blogs.css">
+    <link rel="stylesheet" href="css/additional.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">JimmyN's Personal Playground</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>My Blog</h1>
+                <p>This is where I share my daily thoughts, news, and interests.</p>
+            </div>
+        </section>
+
+        <section class="blog-posts">
+            <div class="container">
+                <div class="filter-options">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="tech">Technology</button>
+                    <button class="filter-btn" data-filter="competitions">Competitions</button>
+                    <button class="filter-btn" data-filter="trips">Trips</button>
+                    <button class="filter-btn" data-filter="hobbies">Hobbies</button>
+                </div>
+                
+                <div class="blog-grid">
+                    <div class="blog-card" data-category="tech hobbies" data-post-id="personal-website-blog">
+                        <div class="blog-image">
+                            <img src="images/Personal Website Thumbnail.png" alt="Personal Website Thumbnail">
+                        </div>
+                        <div class="blog-date">March 13, 2025</div>
+                        <h3>My first Personal Website!</h3>
+                        <p>After a long time of learning, I finally made my first personal website, which is the one you are on!</p>
+                        <div class="tags">
+                            <span>Technology</span>
+                            <span>Hobbies</span>
+                        </div>
+                        <div class="blog-stats">
+                            <span class="visitor-count"><i class="fas fa-eye"></i> <span class="count">0</span> views</span>
+                        </div>
+                        <a href="blogs/my-first-personal-website-20250313.html" class="btn small">Read More</a>
+                    </div>
+                    <!-- Blog Card Template
+                    <div class="blog-card" data-category="tech">
+                        <div class="blog-image">
+                            <img src="images/web-development.jpg" alt="Web Development">
+                        </div>
+                        <div class="blog-date">December 10, 2024</div>
+                        <h3>Modern Web Development Trends</h3>
+                        <p>Exploring the latest technologies and approaches in web development.</p>
+                        <div class="tags">
+                            <span>Technology</span>
+                            <span>Web Development</span>
+                        </div>
+                        <a href="blog/web-dev-trends.html" class="btn small">Read More</a>
+                    </div>  <span>Web Development</span>
+                    -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Jimmy N</h3>
+                    <p>Developer, student, and creative thinker based in Taiwan.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/jimmyn0912/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/JimmyN0912"><i class="fab fa-github"></i></a>
+                        <a href="mailto:jjy@jimmyn.idv.tw"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 JimmyN. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/blogs.js"></script>
+    <script src="js/visitor-counter.js"></script>
+</body>
+</html>

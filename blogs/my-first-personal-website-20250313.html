@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Jimmy N</title>
+    <link rel="stylesheet" href="../css/blogs.css">
+    <link rel="stylesheet" href="../css/additional.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">JimmyN's Personal Playground</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../projects.html">Projects</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+    <main>
+        <article class="blog-post">
+            <header class="post-header">
+                <h1>My first personal website</h1>
+                <div class="post-meta-info">
+                    <span><i class="far fa-calendar"></i> March 21, 2025</span>
+                    <span><i class="far fa-clock"></i> 5 min read</span>
+                    <span><i class="far fa-folder"></i> Technology, Hobbies</span>
+                    <span><i class="fas fa-eye"></i> <span class="page-count">0</span> views</span>
+                </div>
+                <div class="full-width-image">
+                    <img src="../images/Personal Website Thumbnail.png" alt="Personal Website Thumbnail" class="modal-image">
+                </div>
+            </header>
+
+            <div class="post-content-full">
+                <p>If you know me personally, you know that I'm very into programming and stuff. I've been self-learning all sorts of programming languages and frameworks for a while now, and I've always wanted to have a personal website to showcase my projects and share my thoughts with the world.</p>
+                <p>Building this website was a fun and challenging experience. I wanted to create a clean and modern design that reflects my personality and style. I also wanted to make sure that the website is easy to navigate and user-friendly.</p>
+                <p>One of the biggest challenges I faced was deciding on the color scheme and layout of the website. I spent hours browsing through different websites and design inspiration to find the perfect combination of colors and fonts. I also spent a lot of time tweaking the layout and structure of the website to make sure that it looks good on all devices.</p>
+                <p>Overall, I'm really happy with how the website turned out. I think it's a great representation of who I am and what I do. I'm excited to start sharing my projects and thoughts with you all, and I hope you enjoy exploring my website!</p>
+                <p>If you want to learn more about how I built this website, go to my <a href="../projects/project-details-website.html">Projects page about this website</a>! I shared more details about how I built this website and the technologies I used.</p>
+
+            </div>
+
+            <div class="post-navigation">
+                <div class="prev-post"></div>
+                <div class="next-post">
+                    <span class="nav-label">Next Post</span>
+                    <a href="#">Coming Soon!</a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Jimmy N</h3>
+                    <p>Developer, student, and creative thinker based in Taiwan.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/jimmyn0912/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/JimmyN0912"><i class="fab fa-github"></i></a>
+                        <a href="mailto:jjy@jimmyn.idv.tw"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 JimmyN. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/visitor-counter.js"></script>
+    <input type="hidden" id="blog-post-id" value="personal-website-blog">
+</body>
+</html>

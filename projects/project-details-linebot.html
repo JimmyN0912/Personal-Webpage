@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification Bot for LINE | Projects | Jimmy N</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/additional.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="../index.html">JimmyN's Personal Playground</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../projects.html" class="active">Projects</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+    <main>
+        <article class="project-detail">
+            <header class="project-detail-header">
+                <h1>Notification Bot for LINE</h1>
+                <div class="post-meta-info">
+                    <span><i class="far fa-calendar"></i> March 17, 2025</span>
+                    <span><i class="fas fa-eye"></i> <span class="page-count">0</span> views</span>
+                </div>
+                <div class="project-tags">
+                    <span>Python</span>
+                    <span>MS Power Automate</span>
+                </div>
+            </header>
+
+            <div class="project-description">
+                <h2>1. Project Overview</h2>
+                <p>A notification bot for LINE that sends daily reminders for class tasks and events. The bot is built using both Python and Microsoft Power Automate.</p> 
+
+                <h2>2. Key Features</h2>
+                <ul>
+                    <li>Auto download reminders to a .csv file before each message.</li>
+                    <li>Checks reminders for the next day as well as three days in advance.</li>
+                    <li>Automatically sends reminders to a LINE group chat at a specified time.</li>
+                    <li>Also includes the class schedule for the next day.</li>
+                    <li>Finally, appends weather information for the next day, courtesy of Central Weather Bureau RSS feed.</li>
+                </ul>
+                <p></p>
+
+                <h2>3. Technical Details</h2>
+                <p>This project was developed using Python for downloading the reminders, and Microsoft Power Automate for sending the messages to the LINE group chat. The bot is hosted on a  Windows Desktop running 24/7, with the task scheduler running the Python script at the specified time.</p>
+                <ul>
+                    <li><strong>Python:</strong> Used to download reminders from the Google Sheets API and save them to a .csv file.</li>
+                    <li><strong>Microsoft Power Automate Desktop:</strong> Used to send the reminders to the LINE group chat at the specified time.</li>
+                    <li><strong>Git:</strong> Used for version control and easy updates.</li>
+                    <li><strong>Windows Task Scheduler:</strong> Used to run 'git pull', the Python script, and the Power Automate Desktop flow at the specified time.</li>
+                    <li><strong>LINE Desktop:</strong> Used to send the reminders to the group chat.</li>
+                </ul>
+                <p></p>
+
+                <h2>4. Development Process</h2>
+                <p>The project started beacuse I noticed that many classmates, including myself, often forgot about assignments and events. I decided to create a bot that would send reminders to our LINE group chat every day.</p>
+                <h3>Step 1: Research & Planning</h3>
+                <p>I initially researched online and found <a href="https://ifttt.com/">IFTTT.com</a>, but using the LINE Notify API with it requires a paid account. I didn't want to pay for it right away as I believe there must be an alternative to it.</p>
+                <p>To my surprise, I did actually found a free alternative to it, which is <a href="https://www.make.com/en">Make.com</a>! <i>This is not a sponsored promotion lol.</i>
+                <p>Although Make.com does have paid tiers, their free tier is more than enough for my use case. What's more, it requires no coding at all! It's all essentially just connecting dots and filling out blanks!</p>
+                <div class="full-width-image" title="Click me to zoom in!">
+                    <img src="images/01-linebot/Make.com Interface.png" alt="Make.com Interface Image" class="modal-image">
+                    <div class="container">
+                        <p>Make.com Interface Image <i>Click the image to zoom in!</i></p>
+                    </div>
+                </div>
+                <h3>Step 2: Development</h3>
+                <p>After finding the platform, I started to develop the bot. Because I aim to make it possible for anyone in my class to add reminders to it, I decided to use a shared spreadsheet as the reminders database.</p>
+                <p>Since most of my classmates are not tech-savvy and only used Google products, I decided to use Google Sheets as the database. Besides, Google provides a easy to use API for it, which makes it easy for my bot to programmatically access the data.</p>
+                <div class="full-width-image" title="Click me to zoom in!">
+                    <img src="images/01-linebot/Reminders Database.png" alt="Reminders Database Image" class="modal-image">
+                    <div class="container">
+                        <p>Reminders Database Image <i>Click the image to zoom in!</i></p>
+                    </div>
+                </div>
+                <p>Then, I started to find ways to send the reminders to the LINE group chat. I found that Make.com has a LINE Notify integration, which allows me to send messages to the group chat as a LINE Notify message.</p>
+                <p>Afterwards, I started to develop the Python script that downloads the reminders from the Google Sheets API and saves them to a .csv file. I also developed another script that handles reminders checking and sending the message to Make platform.</p>
+                <p>Finally, after a bit of trial and error, the first version of the bot is up and running, scheduled to send a message at 10:00 P.M. everyday!</p>
+                <div class="full-width-image" title="Click me to zoom in!">
+                    <img src="images/01-linebot/Notification-v1.jpg" alt="The first iteration of the notification." class="modal-image">
+                    <div class="container">
+                        <p>The first iteration of the notification <i>Click the image to zoom in!</i></p>
+                    </div>
+                </div>
+
+                <h3>Step 3: Feature Enhance</h3>
+                <h4>Reduce Reminders</h4>
+                <p>The first iteration of the bot sends the <strong>Class schedule</strong>, <strong>Reminders for tomorrow</strong>, and <strong>Reminders for the week</strong>.</p>
+                <p>However, I quickly foundout that this is going to cause problems very soon. Since the Notify message has a limit of <strong>1000 characters</strong>, if the reminders are too long, the message will fail to send completely. What's more, I want to keep it to be one message per notification, so splitting the reminders for the week to another message isn't an option.</p>
+                <p>Therefore, I decided to reduce the reminders to just Reminders for tomorrow and Reminders for the next <strong>3 days</strong>. This way, the message will be shorter and more concise.</p>
+                <h4>Weather Information</h4>
+                <p>After reducing the reminders, I feel like appending some weather information to the message would be a nice touch. Therefore, I started to look for a weather API that I can use.</p>
+                <p>After some searching, I found that the Central Weather Bureau of Taiwan provides a RSS feed that contains weather information for the next day. Most importantly, it's <strong>free of charge</strong>! I decided to use this feed to append the weather information to the message.</p>
+                <p>After some trial and error, I successfully appended the weather information to the message. Now, the message contains the class schedule, reminders for the next 3 days, and the weather information for the next day!</p>
+                <div class="full-width-image" title="Click me to zoom in!">
+                    <img src="images/01-linebot/Notification-v2.png" alt="The improved notification with weather information." class="modal-image">
+                    <div class="container">
+                        <p>The improved notification with weather information <i>Click the image to zoom in!</i></p>
+                    </div>
+                </div>
+                
+                <h3>Step 4: Service Transition</h3>
+                <p>After the bot is up and running stably, I received an unfortunate news that LINE Notify is going to be discontinued in March 2025. The only alternative to it is by using the LINE Messaging API, which requires a paid account for my use case.</p>
+                <p>Therefore, I started exploring once again for alternatives. Since the notification needs to be in LINE, I have no choice but to use the LINE Desktop app, and make the bot send messages from my account instead.</p>
+                <p>In order to achieve this, I decided to use Microsoft Power Automate Desktop to design a flow that automatically sends the message to the LINE group chat at the specified time.</p>
+                <p>After some trial and error, I successfully created the flow and the bot is now sending messages from my account instead of LINE Notify!</p>
+                <div class="full-width-image" title="Click me to zoom in!">
+                    <img src="images/01-linebot/Power Automate Flow.png" alt="The Power Automate Desktop flow that sends the message." class="modal-image">
+                    <div class="container">
+                        <p>The Power Automate Desktop flow that sends the message <i>Click the image to zoom in!</i></p>
+                    </div>
+                </div>
+<!--
+                <h2>Project Images</h2>
+                <div class="project-images">
+                    <div class="project-image-item"></div>
+                    <div class="project-image-item"></div>
+                    <div class="project-image-item"></div>
+                    <div class="project-image-item"></div>
+                </div>
+-->
+                <h2>Outcomes & Lessons</h2>
+                <p>This project is the first time that I actually created something that is not only useful to me but also people around me via coding. It's a great feeling to see that the bot is actually helping people to remember about their assignments and events.</p>
+                <p>I also learned a lot from this project. I learned how to use the Google Sheets API, how to use Make.com, how to use the Central Weather Bureau RSS feed, and how to use Microsoft Power Automate Desktop. I also learned how to use the Windows Task Scheduler to run scripts at a specified time.</p>
+                <p>Most importantly, I learned that there probably is a free alternative or workaround to a paid service. It's just a matter of time and effort to find it. I dont need to start paying for a service right away just because it's the only one I know.</p>
+
+                <div class="project-links">
+                    <a href="https://docs.google.com/spreadsheets/d/1614K22AGj6xEkVrzU4j5kxFrOgE-mGeSy3lDM8Y1r98/edit?usp=sharing" class="btn primary"><i class="fab fa-google"></i> Google Sheets Link</a>
+                    <a href="https://github.com/JimmyN0912/LINE-reminders" class="btn secondary"><i class="fab fa-github"></i> View Source</a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Jimmy N</h3>
+                    <p>Developer, student, and creative thinker based in Taiwan.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/jimmyn0912/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/JimmyN0912"><i class="fab fa-github"></i></a>
+                        <a href="mailto:jjy@jimmyn.idv.tw"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 JimmyN. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/visitor-counter.js"></script>
+    <input type="hidden" id="project-post-id" value="linebot-project">
+</body>
+</html>

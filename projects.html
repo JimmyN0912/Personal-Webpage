@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Jimmy N</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/additional.css"> 
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">JimmyN's Personal Playground</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>My Projects</h1>
+                <p>A collection of my personal project and school lectures.</p>
+            </div>
+        </section>
+
+        <section class="projects">
+            <div class="container">
+                <div class="filter-options">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="python">Python</button>
+                    <button class="filter-btn" data-filter="pwrauto">MS Power Automate</button>
+                    <button class="filter-btn" data-filter="web">Web</button>
+                </div>
+                
+                <div class="projects-grid">
+                    <div class="project-card" data-category="python pwrauto" data-post-id="linebot-project">
+                        <div class="project-image">
+                            <img src="images/Notify Thumbnail.JPG" alt="Notification Bot for Class">
+                        </div>
+                        <h3>Notification Bot for LINE</h3>
+                        <p>A automatic notifications bot on LINE for daliy tasks reminders.</p>
+                        <div class="tags">
+                            <span>Python</span>
+                            <span>MS Power Automate</span>
+                        </div>
+                        <div class="blog-stats">
+                            <span class="visitor-count"><i class="fas fa-eye"></i> <span class="count">0</span> views</span>
+                        </div>
+                        <a href="projects/project-details-linebot.html" class="btn small">View Project</a>
+                    </div>
+                    
+                    <div class="project-card" data-category="web" data-post-id="personal-website">
+                        <div class="project-image">
+                            <img src="images/Personal Website Thumbnail.png" alt="Personal Website Thumbnail">
+                        </div>
+                        <h3>Personal Website</h3>
+                        <p>This website you're on right now! Built entirely from scratch!</p>
+                        <div class="tags">
+                            <span>Web</span>
+                        </div>
+                        <div class="blog-stats">
+                            <span class="visitor-count"><i class="fas fa-eye"></i> <span class="count">0</span> views</span>
+                        </div>
+                        <a href="projects/project-details-website.html" class="btn small">View Project</a>
+                    </div>
+                    <!-- Project card template
+                    <div class="project-card" data-category="app">
+                        <div class="project-image"></div>
+                        <h3>Task Manager App</h3>
+                        <p>Mobile application for managing daily tasks and productivity</p>
+                        <div class="tags">
+                            <span>React Native</span>
+                            <span>Firebase</span>
+                        </div>
+                        <a href="project-details.html" class="btn small">View Project</a>
+                    </div>
+                    -->   
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Jimmy N</h3>
+                    <p>Developer, student, and creative thinker based in Taiwan.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/jimmyn0912/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/JimmyN0912"><i class="fab fa-github"></i></a>
+                        <a href="mailto:jjy@jimmyn.idv.tw"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 JimmyN. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/visitor-counter.js"></script>
+</body>
+</html>
