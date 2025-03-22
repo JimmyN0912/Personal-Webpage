@@ -124,17 +124,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-
-// Prevent handling contact form in script.js if contact.js is loaded
-if (typeof window.contactJsLoaded === 'undefined') {
-    window.contactJsLoaded = true;
-    console.log("Contact form handling delegated to contact.js");
-    
-    // Check if we have a contactForm
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        // Remove any existing handlers from script.js
-        const newForm = contactForm.cloneNode(true);
-        contactForm.parentNode.replaceChild(newForm, contactForm);
-    }
-}
