@@ -213,7 +213,7 @@ code {
     text-align: center;
     color: #ccc;
     padding: 10px 0;
-    height: 150px;
+    height: auto;
 }
 
 .modal-content, #caption {
@@ -316,4 +316,70 @@ code {
 
 .visitor-count i {
     color: #3498db;
+}
+
+/* Burger menu animation */
+.burger {
+    cursor: pointer;
+}
+
+.burger.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger.toggle .line2 {
+    opacity: 0;
+}
+
+.burger.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Improve image modal for mobile */
+@media screen and (max-width: 768px) {
+    .modal {
+        padding-top: 20px;
+    }
+    
+    .modal-content {
+        max-width: 95%;
+    }
+    
+    #caption {
+        width: 95%;
+        font-size: 14px;
+    }
+    
+    .close {
+        top: 10px;
+        right: 20px;
+        font-size: 30px;
+    }
+    
+    .full-width-image {
+        position: relative;
+    }
+    
+    .full-width-image::after {
+        content: "Tap image to enlarge";
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-size: 12px;
+        opacity: 0.8;
+    }
+}
+
+/* Improve caption visibility */
+#caption {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 10px;
+    color: white;
+    font-size: 16px;
 }

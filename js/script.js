@@ -3,12 +3,40 @@ document.addEventListener('DOMContentLoaded', function() {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
     
+    // Create overlay div for mobile menu
+    const overlay = document.createElement('div');
+    overlay.className = 'nav-overlay';
+    document.body.appendChild(overlay);
+    
     if (burger) {
         burger.addEventListener('click', function() {
+            // Toggle navigation - supporting both class names for compatibility
+            nav.classList.toggle('active');
             nav.classList.toggle('open');
+            overlay.classList.toggle('active');
+            
+            // Toggle burger animation
             burger.classList.toggle('toggle');
         });
     }
+    
+    // Close menu when clicking outside or on a link
+    overlay.addEventListener('click', function() {
+        nav.classList.remove('active');
+        nav.classList.remove('open');
+        overlay.classList.remove('active');
+        burger.classList.remove('toggle');
+    });
+    
+    // Close menu when clicking on a nav link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', function() {
+            nav.classList.remove('active');
+            nav.classList.remove('open');
+            overlay.classList.remove('active');
+            burger.classList.remove('toggle');
+        });
+    });
     
     // Project filtering in projects.html
     const filterButtons = document.querySelectorAll('.filter-btn');
