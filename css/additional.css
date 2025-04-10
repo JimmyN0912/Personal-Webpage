@@ -383,3 +383,32 @@ code {
     color: white;
     font-size: 16px;
 }
+
+/* Caption box styling for blog posts */
+.caption-box {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 0.95em;
+    margin: 15px 0;
+    color: #666;
+    border-left: 3px solid #ddd;
+}
+
+.caption-box p {
+    margin-bottom: 0;  /* Remove the bottom margin from paragraphs in caption box */
+}
+
+/* If there are multiple paragraphs, only remove margin from the last one */
+.caption-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* Section divider styling for blog posts */
+.section-divider {
+    height: 2px;
+    background: linear-gradient(to right, rgba(230, 230, 230, 0), rgba(230, 230, 230, 125), rgba(230, 230, 230, 0));
+    margin: 40px 0;
+    border: none;
+    width: 100%;
+}
